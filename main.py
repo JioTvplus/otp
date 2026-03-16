@@ -8,20 +8,18 @@ from telethon.sessions import StringSession
 from telethon.errors import ApiIdInvalidError, AuthKeyError
 from pyrogram import Client as PyroClient
 
-# Initialize bot client
 import asyncio
-import uvloop
 
-# Force the creation of a new event loop
-loop = asyncio.new_event_loop()
-asyncio.set_event_loop(loop)
+# Force Python to create and set an event loop
+try:
+    loop = asyncio.get_running_loop()
+except RuntimeError:
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
 
-# Fix: explicitly create and set an event loop
-uvloop.install()
-loop = asyncio.new_event_loop()
-asyncio.set_event_loop(loop)
-
+# Now you can import and start Pyrogram
 from pyrogram import Client
+# ... the rest of your code ...
 
 
 
