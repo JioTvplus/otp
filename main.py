@@ -8,6 +8,23 @@ from telethon.sessions import StringSession
 from telethon.errors import ApiIdInvalidError, AuthKeyError
 from pyrogram import Client as PyroClient
 
+# Initialize bot client
+import asyncio
+import uvloop
+
+# Force the creation of a new event loop
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
+
+# Fix: explicitly create and set an event loop
+uvloop.install()
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
+
+from pyrogram import Client
+
+
+
 BOT_TOKEN = "8034863613:AAF8GrJluyu7P9UZPK_tGWgRyHpv2-FrNFo"
 BOT_API_ID = 17108931
 BOT_API_HASH = "436b24700208cae55ded351d8f25fd7a"
