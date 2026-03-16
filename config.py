@@ -8,9 +8,9 @@ from telethon.sessions import StringSession
 from telethon.errors import ApiIdInvalidError, AuthKeyError
 from pyrogram import Client as PyroClient
 
-BOT_TOKEN = "YOUR_BOT_TOKEN"
-BOT_API_ID = 2040
-BOT_API_HASH = "b18441a1ff607e10a989891a5462e627"
+BOT_TOKEN = "8034863613:AAF8GrJluyu7P9UZPK_tGWgRyHpv2-FrNFo"
+BOT_API_ID = 17108931
+BOT_API_HASH = "436b24700208cae55ded351d8f25fd7a"
 OTP_SENDER_ID = 777000
 OTP_TIMEOUT = 60
 POLL_INTERVAL = 1.5
